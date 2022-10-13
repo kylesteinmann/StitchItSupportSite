@@ -38,7 +38,7 @@ button {
   display: flex;
   flex-direction: row;
 }
-textarea {
+#description {
   height: 60px;
   width: 275px;
 }

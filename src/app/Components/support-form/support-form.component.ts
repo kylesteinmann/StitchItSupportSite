@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { TicketService } from 'src/app/ticket.service';
 
 @Component({
   selector: 'app-support-form',
@@ -7,11 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SupportFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ticketService:TicketService) { }
 
   ngOnInit(): void {
   }
-  onSubmitForm(){
+  onSubmitForm(form:NgForm){
+this.ticketService.ticket = (form.value.fullName, form.value.companyName, form.value.email, form.value.phoneNumber,form.value.brand, form.value.description)
+console.log(this.ticketService.ticket)
+}
 
-  }
 }

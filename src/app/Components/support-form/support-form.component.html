@@ -1,29 +1,29 @@
-<form action="submit">
+<form (ngSubmit)="onSubmitForm(f)" #f="ngForm">
   <fieldset>
     <div class="group">
       <div>
-        <label for="fullName">Full Name:</label>
-        <input type="text" />
+        <label for="fullName" >Full Name:</label>
+        <input type="text" id="fullName" ngModel name="fullName">
       </div>
       <div>
         <label for="companyName">Company Name:</label>
-        <input type="text" />
+        <input type="text" id="companyName" ngModel name="companyName">
       </div>
     </div>
     <div class="group">
       <div>
         <label for="phoneNumber">Phone Number:</label>
-        <input type="text" />
+        <input type="text" id="phoneNumber" ngModel name="phoneNumber">
       </div>
       <div>
         <label for="email">Email:</label>
-        <input type="text" />
+        <input type="text" id="email"ngModel name="email">
       </div>
     </div>
     <div class="group">
       <div>
         <label for="brand">Brand:</label>
-        <select name="brand">
+        <select name="brand" id="brand" ngModel name="brand">
           <option value="swf">SWF</option>
           <option value="oki">OKI</option>
           <option value="crio">Crio</option>
@@ -33,10 +33,10 @@
       </div>
       <div>
         <label>Description of Issue:</label>
-        <textArea value="description"></textArea>
+        <input type="text" id="description" ngModel name="description">
       </div>
     </div>
-    <button mat-flat-button (click)="onSubmitForm()">Submit</button>
+    <button mat-flat-button type="submit">Submit</button>
   </fieldset>
 
 </form>
