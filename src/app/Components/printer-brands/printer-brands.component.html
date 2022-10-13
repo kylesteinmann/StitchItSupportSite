@@ -1,0 +1,14 @@
+<div class="container">
+  <header>
+    <h1>What brand do you have?</h1>
+  </header>
+  <div class="buttonContainer">
+    <button mat-flat-button routerLink="">Crio or OKI
+    </button>
+    <button mat-flat-button routerLink="">Uninet iColor</button>
+    <button mat-flat-button (click)="onSawgrassInformation()" >Sawgrass</button>
+  </div>
+  <div class="information">
+    <h2>{{ information }}</h2>
+  </div>
+</div>

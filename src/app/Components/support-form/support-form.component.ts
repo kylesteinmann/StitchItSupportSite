@@ -11,5 +11,7 @@ export class SupportFormComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  onSubmitForm(){
 
+  }
 }
