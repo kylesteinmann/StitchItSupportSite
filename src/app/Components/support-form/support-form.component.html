@@ -1,4 +1,4 @@
-<form (ngSubmit)="onSubmitForm(f)" #f="ngForm">
+<form (ngSubmit)="ticketService.onSubmitForm(f)" #f="ngForm">
   <fieldset>
     <div class="group">
       <div>
@@ -55,5 +55,7 @@
       </div>
     </div>
     <button mat-flat-button type="submit">Submit</button>
+    <app-submit-success *ngIf="ticketService.ticketSubmitted.success === 'true' "></app-submit-success>
   </fieldset>
 </form>
+<app-type-of-machine></app-type-of-machine>

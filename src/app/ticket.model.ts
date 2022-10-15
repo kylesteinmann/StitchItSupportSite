@@ -3,16 +3,16 @@ export class Ticket {
   public companyName!: string;
   public phoneNumber: string;
   public email: string;
-  public brand: string;
+  public makeModel: string;
   public description: string
 
-  constructor(fullName: string, companyName: string, phoneNumber: string, email: string, brand: string, description: string) {
+  constructor(fullName: string, companyName: string, phoneNumber: string, email: string, makeModel: string, description: string) {
 
-    this.fullName = fullName;
+    {this.fullName = fullName;
     this.companyName = companyName;
     this.phoneNumber = phoneNumber;
     this.email = email;
-    this.brand = brand;
-    this.description = description;
+    this.makeModel = makeModel;
+    this.description = description;}
   }
 }

@@ -10,22 +10,12 @@ import { TicketService } from 'src/app/ticket.service';
 })
 export class SupportFormComponent implements OnInit {
 
-  constructor(private ticketService: TicketService, private router:Router, ) { }
+
+  constructor(public ticketService: TicketService, private router:Router ) { }
 
   ngOnInit(): void {
   }
-  onSubmitForm(form: NgForm) {
-    this.ticketService.ticket = ({
-      fullname: form.value.fullName,
-      companyName: form.value.companyName,
-      email: form.value.email,
-      phoneNumber: form.value.phoneNumber,
-      makeModel: form.value.makeModel,
-      description: form.value.description
-    })
 
-    console.log(this.ticketService.ticket)
-    this.router.navigateByUrl("/typeOfMachine")
-  }
+    }
 
-}
+

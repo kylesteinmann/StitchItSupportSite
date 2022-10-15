@@ -7,6 +7,7 @@ import { TypeOfMachineComponent } from './Components/type-of-machine/type-of-mac
 import { SwfModelsComponent } from './Components/swf-models/swf-models.component';
 import { EmbroideryBrandsComponent } from './Components/embroidery-brands/embroidery-brands.component';
 import { PrinterBrandsComponent } from './Components/printer-brands/printer-brands.component';
+import { SubmitSuccessComponent } from './Components/submit-success/submit-success.component';
 
 const routes: Routes = [
   {path: 'supportForm', component: SupportFormComponent},
@@ -16,7 +17,7 @@ const routes: Routes = [
   {path:'swfModels', component: SwfModelsComponent},
   {path:'embroideryBrands', component: EmbroideryBrandsComponent},
   {path:'printerBrands', component: PrinterBrandsComponent},
-
+  {path:'successSubmit', component: SubmitSuccessComponent},
   {path: '', component: TypeOfMachineComponent}
 ];
 
