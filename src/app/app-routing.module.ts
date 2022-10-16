@@ -8,6 +8,8 @@ import { SwfModelsComponent } from './Components/swf-models/swf-models.component
 import { EmbroideryBrandsComponent } from './Components/embroidery-brands/embroidery-brands.component';
 import { PrinterBrandsComponent } from './Components/printer-brands/printer-brands.component';
 import { SubmitSuccessComponent } from './Components/submit-success/submit-success.component';
+import { OkiModelsComponent } from './Components/oki-models/oki-models.component';
+import { IcolorModelsComponent } from "./Components/icolor-models/icolor-models.component"
 
 const routes: Routes = [
   {path: 'supportForm', component: SupportFormComponent},
@@ -18,7 +20,10 @@ const routes: Routes = [
   {path:'embroideryBrands', component: EmbroideryBrandsComponent},
   {path:'printerBrands', component: PrinterBrandsComponent},
   {path:'successSubmit', component: SubmitSuccessComponent},
-  {path: '', component: TypeOfMachineComponent}
+  {path:'okiModels', component: OkiModelsComponent},
+  {path:'icolorModelsComponent', component: IcolorModelsComponent},
+  {path: '', component: TypeOfMachineComponent},
+
 ];
 
 @NgModule({

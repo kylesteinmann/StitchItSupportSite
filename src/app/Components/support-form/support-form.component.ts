@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { Router } from '@angular/router';
-import { Ticket } from 'src/app/ticket.model';
+
 import { TicketService } from 'src/app/ticket.service';
 @Component({
   selector: 'app-support-form',
@@ -11,7 +9,7 @@ import { TicketService } from 'src/app/ticket.service';
 export class SupportFormComponent implements OnInit {
 
 
-  constructor(public ticketService: TicketService, private router:Router ) { }
+  constructor(public ticketService: TicketService) { }
 
   ngOnInit(): void {
   }

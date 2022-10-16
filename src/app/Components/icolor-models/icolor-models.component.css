@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  margin: 40px 0 0 0;
+}
+h1{
+  color:black;
+}
+
+button {
+  margin: 20px 10px 0 10px;
+  font-weight: 500;
+  font-size: large;
+  background-color: #d21919;
+  color: white;
+  border: none;
+  width: 150px;
+}
+
+.information {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+
+}

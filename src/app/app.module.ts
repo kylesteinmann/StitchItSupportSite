@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Components/header/header.component';
@@ -14,6 +14,8 @@ import { SwfModelsComponent } from './Components/swf-models/swf-models.component
 import { EmbroideryBrandsComponent } from './Components/embroidery-brands/embroidery-brands.component';
 import { PrinterBrandsComponent } from './Components/printer-brands/printer-brands.component';
 import { SubmitSuccessComponent } from './Components/submit-success/submit-success.component';
+import { OkiModelsComponent } from './Components/oki-models/oki-models.component';
+import { IcolorModelsComponent } from './Components/icolor-models/icolor-models.component';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { SubmitSuccessComponent } from './Components/submit-success/submit-succe
     SwfModelsComponent,
     EmbroideryBrandsComponent,
     PrinterBrandsComponent,
-    SubmitSuccessComponent
+    SubmitSuccessComponent,
+    OkiModelsComponent,
+    IcolorModelsComponent
   ],
   imports: [
     BrowserModule,

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./embroidery-brands.component.css']
 })
 export class EmbroideryBrandsComponent implements OnInit {
-  information ='Please choose an above option.'
+  information ='Please choose an option above.'
 
   hsiWebsite = "https://www.hsi.us/support"
   constructor() { }

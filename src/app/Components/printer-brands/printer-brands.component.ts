@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./printer-brands.component.css']
 })
 export class PrinterBrandsComponent implements OnInit {
-  information = "Please choose an above option."
+  information = "Please choose an option above."
   constructor() { }
 
   ngOnInit(): void {
