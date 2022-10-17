@@ -16,6 +16,7 @@ import { PrinterBrandsComponent } from './Components/printer-brands/printer-bran
 import { SubmitSuccessComponent } from './Components/submit-success/submit-success.component';
 import { OkiModelsComponent } from './Components/oki-models/oki-models.component';
 import { IcolorModelsComponent } from './Components/icolor-models/icolor-models.component';
+import { UnderConstructionComponent } from './Components/under-construction/under-construction.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { IcolorModelsComponent } from './Components/icolor-models/icolor-models.
     PrinterBrandsComponent,
     SubmitSuccessComponent,
     OkiModelsComponent,
-    IcolorModelsComponent
+    IcolorModelsComponent,
+    UnderConstructionComponent
   ],
   imports: [
     BrowserModule,

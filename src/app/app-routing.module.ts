@@ -9,7 +9,8 @@ import { EmbroideryBrandsComponent } from './Components/embroidery-brands/embroi
 import { PrinterBrandsComponent } from './Components/printer-brands/printer-brands.component';
 import { SubmitSuccessComponent } from './Components/submit-success/submit-success.component';
 import { OkiModelsComponent } from './Components/oki-models/oki-models.component';
-import { IcolorModelsComponent } from "./Components/icolor-models/icolor-models.component"
+import { IcolorModelsComponent } from "./Components/icolor-models/icolor-models.component";
+import { UnderConstructionComponent } from './Components/under-construction/under-construction.component';
 
 const routes: Routes = [
   {path: 'supportForm', component: SupportFormComponent},
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path:'successSubmit', component: SubmitSuccessComponent},
   {path:'okiModels', component: OkiModelsComponent},
   {path:'icolorModelsComponent', component: IcolorModelsComponent},
+  {path:'underConstruction', component: UnderConstructionComponent},
   {path: '', component: TypeOfMachineComponent},
 
 ];
