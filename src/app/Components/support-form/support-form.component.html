@@ -1,9 +1,12 @@
-<form (ngSubmit)="ticketService.onSubmitForm(f)" #f="ngForm">
-  <fieldset>
+<form (ngSubmit)="ticketService.onSubmitForm(f)" #f="ngForm" *ngIf="ticketService.ticketSubmitted.success === 'false'">
+  <fieldset >
+   <span
+      >*Please fill in all required information to submit.</span
+    >
     <div class="group">
       <div>
-        <label for="fullName">Full Name:</label>
-        <input type="text" id="fullName" ngModel name="fullName"/>
+        <label for="fullName">*Full Name:</label>
+        <input type="text" id="fullName" ngModel name="fullName" required />
       </div>
       <div>
         <label for="companyName">Company Name:</label>
@@ -12,17 +15,17 @@
     </div>
     <div class="group">
       <div>
-        <label for="phoneNumber">Phone Number:</label>
+        <label for="phoneNumber">*Phone Number:</label>
         <input type="text" id="phoneNumber" ngModel name="phoneNumber" />
       </div>
       <div>
-        <label for="email">Email:</label>
-        <input type="text" id="email" ngModel name="email" />
+        <label for="email">*Email:</label>
+        <input type="text" id="email" ngModel name="email" required email />
       </div>
     </div>
     <div class="group">
       <div>
-        <label for="makeModel">Make & Model:</label>
+        <label for="makeModel" requied>*Make & Model:</label>
         <select name="makeModel" id="model" ngModel>
           <option value="OKI C711WT">OKI C711WT</option>
           <option value="OKI 842WT">OKI 842WDT</option>
@@ -50,12 +53,21 @@
         </select>
       </div>
       <div>
-        <label>Description of Issue:</label>
-        <textarea id="description" ngModel name="description"></textarea>
+        <label>*Description of Issue:</label>
+        <textarea
+          id="description"
+          ngModel
+          name="description"
+          required
+        ></textarea>
       </div>
     </div>
-    <button mat-flat-button type="submit">Submit</button>
-    <app-submit-success *ngIf="ticketService.ticketSubmitted.success === 'true' "></app-submit-success>
+    <button mat-flat-button type="submit" [disabled]="!f.valid">Submit</button>
+
   </fieldset>
 </form>
+<div class="messageContainer">
+<app-submit-success
+      *ngIf="ticketService.ticketSubmitted.success === 'true'"
+    ></app-submit-success></div>
 <app-type-of-machine></app-type-of-machine>
