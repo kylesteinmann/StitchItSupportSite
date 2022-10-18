@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Ticket } from './ticket.model';
+import { Ticket } from '../ticket.model';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 

@@ -2,9 +2,10 @@
   <header>
     <h1>What type of machine do you have?</h1>
   </header>
-  <div class="buttonContainer" >
-    <button mat-flat-button routerLink="/embroideryBrands">Embroidery Machine</button>
-    <button mat-flat-button routerLink="/printerBrands">White Toner/Sublimation Printer</button>
+  <div class="buttonContainer">
+    <button mat-flat-button *ngFor="let button of buttonsService.uniqueTypeButtons()" [routerLink]="button.brandRoute">
+      {{ button.type }}
+    </button>
   </div>
   <div class="information">
     <h2>Please choose an option above.</h2>

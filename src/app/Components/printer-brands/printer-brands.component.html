@@ -3,10 +3,8 @@
     <h1>What brand do you have?</h1>
   </header>
   <div class="buttonContainer">
-    <button mat-flat-button routerLink="/okiModels">Crio or OKI
+    <button mat-flat-button *ngFor="let button of buttonsService.uniqueTypeButtons()">{{buttonsService.machineTypeButton.brand}}
     </button>
-    <button mat-flat-button routerLink="/icolorModelsComponent">Uninet iColor</button>
-    <button mat-flat-button (click)="onSawgrassInformation()" >Sawgrass</button>
   </div>
   <div class="information">
     <h2>{{ information }}</h2>
