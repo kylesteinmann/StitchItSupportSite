@@ -3,11 +3,10 @@
     <h1>What model do you have?</h1>
   </header>
   <div class="buttonContainer">
-    <button mat-flat-button routerLink="/underConstruction">C711WT
+    <button mat-flat-button *ngFor="let button of buttonsService.uniqueModelButtons('OKI')" routerLink="/underConstruction">
+      {{ button.model }}
     </button>
-    <button mat-flat-button routerLink="/underConstruction">8432WDT</button>
-    <button mat-flat-button routerLink="/underConstruction">9542WDT</button>
-  </div>
+
   <div class="information">
     <h2>Please choose an option above.</h2>
   </div>

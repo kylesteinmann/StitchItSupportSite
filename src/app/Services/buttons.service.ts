@@ -25,13 +25,15 @@ export class ButtonsService {
       brandRoute: "/printerBrands",
       brand: "OKI",
       modelsRoute: "/printerModels",
-      model: "Pro9541WT",
+      model: "8432",
       modelInfoRoute: ""
     }
   ];
-//
+  //
   uniqueKeys = new Set();
   uniqueButtons: any;
+  brandArray: any = []
+
 
   uniqueTypeButtons() {
     return this.uniqueButtons = this.machineTypeButton.filter(element => {
@@ -43,8 +45,11 @@ export class ButtonsService {
       return false;
     })
   }
-  uniqueBrandButtons() {
-    return this.uniqueButtons = this.uniqueTypeButtons().filter(element => {
+  uniqueBrandButtons(selector: string) {
+
+    const uniqueBrandsArray = this.machineTypeButton.filter(element => element.type === selector)
+
+    return this.uniqueButtons = uniqueBrandsArray.filter(element => {
       const isDuplicate = this.uniqueKeys.has(element.brand);
       this.uniqueKeys.add(element.brand);
       if (!isDuplicate) {
@@ -53,7 +58,23 @@ export class ButtonsService {
       return false;
     })
   }
-}
+
+  uniqueModelButtons(selector: string) {
+
+    const uniqueBrandsArray = this.machineTypeButton.filter(element => element.brand === selector)
+
+    return this.uniqueButtons = uniqueBrandsArray.filter(element => {
+      const isDuplicate = this.uniqueKeys.has(element.model);
+      this.uniqueKeys.add(element.model);
+      if (!isDuplicate) {
+        return true;
+      }
+      return false;
+    })
+  }
+
+  }
+
 
 
 

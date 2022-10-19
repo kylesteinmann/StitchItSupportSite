@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ButtonsService } from 'src/app/Services/buttons.service';
 
 @Component({
   selector: 'app-oki-models',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OkiModelsComponent implements OnInit {
 
-  constructor() { }
+  constructor(public buttonsService:ButtonsService) { }
 
   ngOnInit(): void {
   }

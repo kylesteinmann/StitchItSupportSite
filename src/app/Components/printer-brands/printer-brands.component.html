@@ -3,7 +3,7 @@
     <h1>What brand do you have?</h1>
   </header>
   <div class="buttonContainer">
-    <button mat-flat-button *ngFor="let button of buttonsService.uniqueTypeButtons()">{{buttonsService.machineTypeButton.brand}}
+    <button mat-flat-button *ngFor="let button of buttonsService.uniqueBrandButtons('White Toner/Sublimation Printer')" routerLink="/okiModels">{{button.brand}}
     </button>
   </div>
   <div class="information">
